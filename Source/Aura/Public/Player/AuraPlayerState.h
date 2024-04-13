@@ -19,13 +19,18 @@ class AURA_API AAuraPlayerState : public APlayerState,public IAbilitySystemInter
 public:
 	AAuraPlayerState();
 
+	// 初始化
 	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const override;
 	UAttributeSet* GetAttributeSet() const{return AttributeSet;}
 
 protected:
+	// 能力组件
 	UPROPERTY()
 	TObjectPtr<UAbilitySystemComponent> AbilitySystemComponent;
 
+	// 属性集
 	UPROPERTY()
 	TObjectPtr<UAttributeSet> AttributeSet;
+
+	
 };

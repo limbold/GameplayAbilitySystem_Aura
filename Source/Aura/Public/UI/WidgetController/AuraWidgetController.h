@@ -45,6 +45,8 @@ public:
 	// 给FWidgtetControllerParams结构体参数初始化AuraWidgetController的成员变量
 	UFUNCTION(BlueprintCallable)
 	void SetWidgetControllerParams(const FWidgtetControllerParams& WCParams);
+	
+	virtual void BroadcastInitialValues();
 protected:
 	// PlayerController
 	UPROPERTY(BlueprintReadOnly, Category="WidgetController")
